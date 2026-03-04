@@ -107,7 +107,8 @@ int main(int argn, char* argv[])
     std::ifstream fin("OutGrid.txt");
     std::cout << "Contents of OutGrid.txt:\n\n";
     std::string line;
-    while (getline(fin, line)) {
+    while (getline(fin, line))
+	{
         std::cout << line << "\n";
     }
 
