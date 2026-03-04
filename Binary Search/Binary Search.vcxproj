@@ -139,10 +139,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="IterativeBinarySearch.cpp" />
+    <ClCompile Include="RecursiveBinarySearch.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="binarysearchIn.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IterativeBinarySearch.h" />
+    <ClInclude Include="RecursiveBinarySearch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
