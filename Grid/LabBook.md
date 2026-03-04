@@ -119,6 +119,21 @@ int main(int argn, char* argv[])
 }
 ```
 # Binary Search
+Iteration: Repeating work using **explicit looping constructs** - for, while, do...while
+e.g. 
+```cpp
+int sum = 0;
+for (int i = 1; i <= 5; i++)
+    sum += i;
+```
+Recursion: function calls itself to repeat work - creating a new stack frame each time.
+```cpp
+int sum(int n)
+{
+    if (n == 0) return 0;
+    return n + sum(n - 1);
+}
+```
 ## 1. Binary search with Iteration
 
 ## 2. Binary search with Recursion
