@@ -164,6 +164,14 @@ bool IterativeBinarySearch::binarySearch(int* list, int size, int value)
 	return false; // Not found
 }
 ```
+This approach defines ```left``` and ```right``` as the **beginning** and **end** of the **sorted array**, it then loops **while** ```left``` is valid (less than or equal to the last index of the array). 
+We define the middle point - ```int mid = left + (right - left) / 2;```
+If the value searched for is greater than the middle value, we search the right half of the current array (defined by the start ```left = mid + 1```), otherwise we search the left half of the array with ```left = mid - 1```. 
+- return true if mid == value
+- return true if found
+- else false (not found)
+- Time complexity (O (log n)) + Space complexity (O (1))
+
 
 ## 2. Binary search with Recursion
 ```cpp
@@ -186,3 +194,12 @@ bool RecursiveBinarySearch::binarySearch(int* list, int size, int value)
         return binarySearch(list, mid, value);
 }
 ```
+This approach does not define any new variables.
+- Time complexity (O (log n)) + Space complexity (O (log n)) - additional memory used by memory stack.
+- The mid value is basically static, each recursive call halves the array to find the value, it compares the mid value to the target value to determine whether the value is found.
+  
+### Thoughts on the two versions of Binary sort
+Depending on what you prefer (performance or Ease of readability), it will affect which version is the most appropriate. 
+- Recursive is much easier to read, and I think it visually explains the nature of binary sort more accurately.
+	- But it looks a little more elusive / abstract. 
+- Recursive may be more obvious of being a binary sort quicker than the iterative version. 
